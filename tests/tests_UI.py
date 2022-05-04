@@ -1,15 +1,17 @@
 import pytest as pytest
-# from selenium.webdriver.chrome import webdriver
 from selenium import webdriver
 from app.ui.cosmos_id_ui import CosmosIDUI
 
 
 @pytest.fixture(scope="session")
 def ui_app():
-    driver = webdriver.Chrome(executable_path="/home/yanisimova/Downloads/chromedriver_linux641/chromedriver")
+    """Fixture for initializing web app instance CosmosIDUI()"""
+    driver = webdriver.Chrome()
     yield CosmosIDUI(driver)
+    driver.quit()
 
 
 def test_login_fail(ui_app):
     """Test user can not login with wrong creds"""
-    assert ui_app.login("kjhk@kjhk.com", "hkjljk").assert_login_faild() is False
+    ui_app.login_page.login("kjhk@kjhk.com", "hkjljk")
+    ui_app.login_page.assert_login_faild()

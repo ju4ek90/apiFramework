@@ -9,29 +9,25 @@ class LoginPage(BasePage):
     PASS_FIELD = (By.XPATH, "//*[@id='password']")
     LOGIN_BTN = (By.XPATH, "//*[@id='signInButton']")
     LOGIN_ERR = (By.XPATH, "//div[contains(.,'Password is not correct')]")
+    FIRST_MESSAGE = (By.XPATH, "//button[contains(.,'Do not show again')]")
 
-    def __init__(self, driver) -> None:
-        super(driver)
+    def __init__(self, driver):
+        super().__init__(driver)
 
     def login(self, username, password):
         url = self.prepere_url(Urls.LOGIN)
         self.driver.get(url)
+        self.click(element=self.FIRST_MESSAGE)
 
-        self.enter_text(username, LoginPage.USERNAME_FIELD)
-
-        self.enter_text(password, LoginPage.PASS_FIELD)
-
-        self.click(LoginPage.LOGIN_BTN)
-
-        return True
+        self.enter_text(text=username, element=self.USERNAME_FIELD)
+        self.enter_text(text=password, element=self.PASS_FIELD)
+        self.click(element=self.LOGIN_BTN)
 
     def go_to_register_page(self):
         pass
 
     def assert_login_faild(self):
-        element = self.driver.find_element(LoginPage.LOGIN_ERR)
-        if element is not None:
-            return True
-
-
-
+        self.is_element_present(self.LOGIN_ERR)
+        # element = self.driver.find_element(LoginPage.LOGIN_ERR)
+        # if element is not None:
+        #     return True
