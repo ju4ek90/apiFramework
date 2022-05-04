@@ -28,6 +28,4 @@ class LoginPage(BasePage):
 
     def assert_login_faild(self):
         self.is_element_present(self.LOGIN_ERR)
-        # element = self.driver.find_element(LoginPage.LOGIN_ERR)
-        # if element is not None:
-        #     return True
+
