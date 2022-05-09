@@ -31,7 +31,7 @@ class BasePage:
         element = self.driver.find_element(*element)
         return element
 
-    def is_element_present(self, element, timeout=3):
+    def is_element_present(self, element, timeout=Config.TIMEOUT_LOGIN):
         """Method-waiter, checking that element is present on the page"""
         try:
             WebDriverWait(self.driver, timeout=timeout).until(

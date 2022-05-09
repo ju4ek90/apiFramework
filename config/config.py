@@ -9,3 +9,4 @@ class Config:
 
     BASE_URL = 'https://app.cosmosid.com'
     LOGIN_TOKEN = os.getenv('AUTH_KEY', None)
+    TIMEOUT_LOGIN = 3

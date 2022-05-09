@@ -27,5 +27,5 @@ class LoginPage(BasePage):
         pass
 
     def assert_login_faild(self):
-        self.is_element_present(self.LOGIN_ERR)
+        return self.is_element_present(self.LOGIN_ERR)
 
