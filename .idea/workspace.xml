@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="778e2c68-3a58-490b-bae4-b4436e26d957" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/providers/browsers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ui/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/base_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ui/cosmos_id_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/cosmos_id_ui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ui/page_objects/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/page_objects/login_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/providers_data/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/tests_UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/tests_UI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools_logger/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/providers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
